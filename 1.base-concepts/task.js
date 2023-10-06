@@ -7,8 +7,8 @@ function solveEquation(a, b, c) {
   let D = b*b-4*a*c;
   let x1, x2;
     if(D>0) {
-     x1 = (-b + Math.sqrt(d) )/(2*a);
-     x2 = (-b - Math.sqrt(d) )/(2*a);
+     x1 = (-b + Math.sqrt(D) )/(2*a);
+     x2 = (-b - Math.sqrt(D) )/(2*a);
      arr.push(x1);
      arr.push(x2);
      return arr;
