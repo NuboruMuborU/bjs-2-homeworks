@@ -11,27 +11,22 @@ function solveEquation(a, b, c) {
      x2 = (-b - Math.sqrt(D) )/(2*a);
      arr.push(x1);
      arr.push(x2);
-     return arr;
   } 
     else if(D==0) {
      x1=-b/(2*a);
      arr.push(x1);
-      return arr;
   } 
-    else if(D<0) {
-      return arr;
-  }
+     return arr;
 
 }
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  //let interestRate = percent * 100 / 10000;
   let S = amount - contribution;
   let rate = percent / 100 / 12;
   let monthPay = S * (rate + (rate / (((1 + rate)**countMonths) - 1)));
-  let result = (monthPay * 12);
+  let result = (monthPay * countMonths);
   if (result != 0) {
-    return result.toFixed(2);
+    return Number(result.toFixed(2));
   }
   else {
     return result;
