@@ -8,9 +8,7 @@ function getArrayParams(arr) {
   }
 
   avg = sum / arr.length;
-  avg.toFixed(2);
-  
-  Number(avg);
+  avg = Math.round(avg * 100) / 100
 
   return { min: min, max: max, avg: avg };
 }
