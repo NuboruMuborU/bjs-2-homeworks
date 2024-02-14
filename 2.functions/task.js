@@ -1,4 +1,4 @@
-function getArrayParams(...arr) {
+function getArrayParams(arr) {
   let min = arr[0], max = arr[0], sum = 0, avg = 0;
 
   for (let i = 0; i < arr.length; i++) {
