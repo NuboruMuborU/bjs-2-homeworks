@@ -24,7 +24,9 @@ function summElementsWorker(...arr) {
 }
 
 function differenceMaxMinWorker(...arr) {
-  let min = arr[0], max = arr[0], sum = 0, avg = 0;
+  let min = arr[0], max = arr[0];
+
+  if(arr.length = 0) return 0;
 
   for (let element of arr) {
     if(element > max) max = element;
