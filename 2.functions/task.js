@@ -33,7 +33,7 @@ function differenceMaxMinWorker(...arr) {
     if(element < min) min = element;
   }
 
-  return max / min;
+  return max - min;
 }
 
 function differenceEvenOddWorker(...arr) {
