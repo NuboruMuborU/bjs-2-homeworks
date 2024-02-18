@@ -1,5 +1,5 @@
 function getArrayParams(...arr) {
-  let min = arr[0][0], max = arr[0][0], sum = 0, avg = 0;
+  let min = arr[0], max = arr[0], sum = 0, avg = 0;
 
   for (let element of arr) {
       if(element > max) max = element;
