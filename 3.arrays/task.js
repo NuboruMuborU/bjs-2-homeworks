@@ -4,6 +4,9 @@ function compareArrays(arr1, arr2) {
 }
 
 function getUsersNamesInAgeRange(users, gender) {
+
+    if(users.length < 1) return 0;
+
     let ages = users
         .filter(users => users.gender === gender)
         .map(users => users.age);
