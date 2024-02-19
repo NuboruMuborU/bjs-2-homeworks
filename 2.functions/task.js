@@ -1,76 +1,86 @@
 function getArrayParams(...arr) {
-  let min = arr[0], max = arr[0], sum = 0, avg = 0;
+	let min = arr[0],
+		max = arr[0],
+		sum = 0,
+		avg = 0;
 
-  for (let element of arr) {
-    if(element > max) max = element;
-    if(element < min) min = element;
-    sum += element;
-  }
+	for (let element of arr) {
+		if (element > max) max = element;
+		if (element < min) min = element;
+		sum += element;
+	}
 
-  avg = sum / arr.length;
-  avg = Math.round(avg * 100) / 100
+	avg = sum / arr.length;
+	avg = Math.round(avg * 100) / 100
 
-  return { min: min, max: max, avg: avg };
+	return {
+		min: min,
+		max: max,
+		avg: avg
+	};
 }
 
 function summElementsWorker(...arr) {
-  let sum = 0;
+	let sum = 0;
 
-  for (let element of arr) {
-      sum += element;
-  }
+	for (let element of arr) {
+		sum += element;
+	}
 
-  return sum;
+	return sum;
 }
 
 function differenceMaxMinWorker(...arr) {
-  let min = arr[0], max = arr[0];
+	let min = arr[0],
+		max = arr[0];
 
-  if(arr.length < 1) return 0;
+	if (arr.length < 1) return 0;
 
-  for (let element of arr) {
-    if(element > max) max = element;
-    if(element < min) min = element;
-  }
+	for (let element of arr) {
+		if (element > max) max = element;
+		if (element < min) min = element;
+	}
 
-  return max - min;
+	return max - min;
 }
 
 function differenceEvenOddWorker(...arr) {
-  let sumEvenElement = 0, sumOddElement = 0;
+	let sumEvenElement = 0,
+		sumOddElement = 0;
 
-  if(arr.length < 1) return 0;
+	if (arr.length < 1) return 0;
 
-  for (let element of arr) {
-    if(element % 2 == 0) sumEvenElement += element;
-    else sumOddElement += element;
-  }
+	for (let element of arr) {
+		if (element % 2 == 0) sumEvenElement += element;
+		else sumOddElement += element;
+	}
 
-  return sumEvenElement - sumOddElement;
+	return sumEvenElement - sumOddElement;
 }
 
 function averageEvenElementsWorker(...arr) {
-  let sumEvenElement = 0, countEvenElement = 0;
+	let sumEvenElement = 0,
+		countEvenElement = 0;
 
-  if(arr.length < 1) return 0;
+	if (arr.length < 1) return 0;
 
-  for (let element of arr) {
-    if(element % 2 == 0) {
-      sumEvenElement += element;
-      countEvenElement++;
-    }
-  }
+	for (let element of arr) {
+		if (element % 2 == 0) {
+			sumEvenElement += element;
+			countEvenElement++;
+		}
+	}
 
-  return sumEvenElement / countEvenElement;
+	return sumEvenElement / countEvenElement;
 }
 
-function makeWork (arrOfArr, func) {
-  let maxWorkerResult = func(...arrOfArr[0]);
+function makeWork(arrOfArr, func) {
+	let maxWorkerResult = func(...arrOfArr[0]);
 
-  for (let i of arrOfArr) {
-      let max = func(...i);
-      if (max > maxWorkerResult) maxWorkerResult = max;
-  }
+	for (let i of arrOfArr) {
+		let max = func(...i);
+		if (max > maxWorkerResult) maxWorkerResult = max;
+	}
 
-  return maxWorkerResult;
+	return maxWorkerResult;
 }
