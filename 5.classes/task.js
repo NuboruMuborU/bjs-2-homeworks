@@ -8,10 +8,11 @@ class PrintEditionItem {
     }
 
     fix() {
-        if(this.state >= 100) {
-            return;
-        }
+        if(this.state <= 0) return;
         this.state *= 1.5;
+        if(this.state > 100) {
+            this.state = 100;
+        }
     }
 
     set setState(num) {
@@ -20,7 +21,7 @@ class PrintEditionItem {
         else this.state = num;
     }
 
-    get getState() {
+    getState() {
         return this.state;
     }
 }
