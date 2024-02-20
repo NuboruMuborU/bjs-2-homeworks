@@ -3,19 +3,19 @@ class PrintEditionItem {
         this.name = name;
         this.releaseDate = releaseDate;
         this.pagesCount = pagesCount;
-        this.state = state = 100;
-        this.type = type = null;
+        this.state = 100;
+        this.type = null;
     }
 
     fix() {
         if(this.state >= 100) {
             return;
         }
-        this.state *= 15;
+        this.state *= 1.5;
     }
 
     set setState(num) {
-        if(num > 0) this.state = 0;
+        if(num < 0) this.state = 0;
         else if(num > 100) this.state = 100;
         else this.state = num;
     }
@@ -60,18 +60,3 @@ class DetectiveBook extends Book {
         this.type = "detective";
     }
 }
-
-
-
-const picknick = new FantasticBook(
-    "Аркадий и Борис Стругацкие",
-    "Пикник на обочине",
-    1972,
-    168
-);
-  
-console.log(picknick.author); //"Аркадий и Борис Стругацкие"
-picknick.state = 10;
-console.log(picknick.state); //10
-picknick.fix();
-console.log(picknick.state); //15
