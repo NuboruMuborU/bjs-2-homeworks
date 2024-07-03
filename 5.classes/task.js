@@ -37,28 +37,28 @@ class Magazine extends PrintEditionItem {
    class Book extends PrintEditionItem {
     constructor() {
         super();
-        this.type = "Book";
+        this.type = "book";
     }
     
 }
 
-   class NovelBook extends PrintEditionItem {
+   class NovelBook extends Book {
     constructor() {
-        super(Book);
+        super();
         this.type = "novel";
     }
     
 }
 
-   class FantasticBook extends PrintEditionItem {
+   class FantasticBook extends Book {
     constructor() {
-        super(Book);
+        super();
         this.type = "fantastic";
     }
     
 }
 
-   class DetectiveBook extends PrintEditionItem {
+   class DetectiveBook extends Book {
     constructor() {
         super();
         this.type = "detective";
