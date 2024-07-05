@@ -21,7 +21,7 @@ class PrintEditionItem {
         else this.state = num;
     }
 
-    get getState() {
+    getState() {
         return this.state;
     }
 }
