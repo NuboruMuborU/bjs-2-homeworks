@@ -28,40 +28,42 @@ class PrintEditionItem {
 
 class Magazine extends PrintEditionItem {
     constructor() {
-        super.getState;
+        super(type);
         this.type = "magazine";
+        super.getState();
     }
     
 }
 
    class Book extends PrintEditionItem {
     constructor() {
-        super().getState();
+        super(type);
         this.type = "book";
+        super.getState();
     }
     
 }
 
-   class NovelBook extends Book {
-    constructor() {
-        super().getState();
-        this.type = "novel";
-    }
+//    class NovelBook extends Book {
+//     constructor() {
+//         super().getState();
+//         this.type = "novel";
+//     }
     
-}
+// }
 
-   class FantasticBook extends Book {
-    constructor() {
-        super().getState();
-        this.type = "fantastic";
-    }
+//    class FantasticBook extends Book {
+//     constructor() {
+//         super().getState();
+//         this.type = "fantastic";
+//     }
     
-}
+// }
 
-   class DetectiveBook extends Book {
-    constructor() {
-        super().getState();
-        this.type = "detective";
-    }
+//    class DetectiveBook extends Book {
+//     constructor() {
+//         super().getState();
+//         this.type = "detective";
+//     }
     
-}
+// }
