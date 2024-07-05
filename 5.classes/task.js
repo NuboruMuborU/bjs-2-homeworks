@@ -27,8 +27,8 @@ class PrintEditionItem {
 }
 
 class Magazine extends PrintEditionItem {
-    constructor() {
-        super(type);
+    constructor(type, state) {
+        super(type, state);
         this.type = "magazine";
         super.getState();
     }
@@ -36,8 +36,8 @@ class Magazine extends PrintEditionItem {
 }
 
    class Book extends PrintEditionItem {
-    constructor() {
-        super(type);
+    constructor(type, state) {
+        super(type, state);
         this.type = "book";
         super.getState();
     }
