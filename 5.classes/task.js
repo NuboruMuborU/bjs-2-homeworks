@@ -15,7 +15,7 @@ class PrintEditionItem {
         }
     }
 
-    setState(num) {
+    set state(num) {
         if(num >= 100){ 
             this.state = 100;
             return
@@ -27,7 +27,7 @@ class PrintEditionItem {
         this.state = num;
     }
 
-    getState() {
+    get state() {
         return this.state;
     }
 }
