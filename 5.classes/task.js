@@ -31,45 +31,50 @@ class PrintEditionItem {
 }
 
 class Magazine extends PrintEditionItem {
-    constructor(type, state) {
-        super(type, state);
-        this.type = "magazine";
-        super.getState;
+    constructor(name, releaseDate, pagesCount) {
+            super(name, releaseDate, pagesCount);
+            super.getState();
+            this.type = "magazine";
     }
-    
 }
 
-   class Book extends PrintEditionItem {
-    constructor(type, state) {
-        super(type, state);
+class Book extends PrintEditionItem {
+    constructor(name, releaseDate, pagesCount, author) {
+        super(name, releaseDate, pagesCount, author);
+        super.getState();
         this.type = "book";
-        super.getState;
+        this.author = author;
     }
-    
 }
 
-   class NovelBook extends Book {
-    constructor() {
-        super.getState;
+ class NovelBook extends Book {
+    constructor(name, releaseDate, pagesCount, author) {
+        super(name, releaseDate, pagesCount, author);
+        super.getState();
         this.type = "novel";
+        this.author = author;
     }
-    
+
 }
 
-   class FantasticBook extends Book {
-    constructor() {
-        super.getState;
+ class FantasticBook extends Book {
+    constructor(name, releaseDate, pagesCount, author) {
+        super(name, releaseDate, pagesCount, author);
+        super.getState();
         this.type = "fantastic";
+        this.author = author;
     }
-    
+
 }
 
-   class DetectiveBook extends Book {
-    constructor() {
-        super.getState;
+ class DetectiveBook extends Book {
+    constructor(name, releaseDate, pagesCount, author) {
+        super(name, releaseDate, pagesCount, author);
+        super.getState();
         this.type = "detective";
+        this.author = author;
     }
-    
+
 }
 
    
