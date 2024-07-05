@@ -44,26 +44,26 @@ class Magazine extends PrintEditionItem {
     
 }
 
-//    class NovelBook extends Book {
-//     constructor() {
-//         super().getState();
-//         this.type = "novel";
-//     }
+   class NovelBook extends Book {
+    constructor() {
+        super().getState();
+        this.type = "novel";
+    }
     
-// }
+}
 
-//    class FantasticBook extends Book {
-//     constructor() {
-//         super().getState();
-//         this.type = "fantastic";
-//     }
+   class FantasticBook extends Book {
+    constructor() {
+        super().getState();
+        this.type = "fantastic";
+    }
     
-// }
+}
 
-//    class DetectiveBook extends Book {
-//     constructor() {
-//         super().getState();
-//         this.type = "detective";
-//     }
+   class DetectiveBook extends Book {
+    constructor() {
+        super().getState();
+        this.type = "detective";
+    }
     
-// }
+}
