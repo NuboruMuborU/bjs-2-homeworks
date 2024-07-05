@@ -8,11 +8,9 @@ class PrintEditionItem {
     }
 
     fix() {
-        if(this.state <= 0) return;
-        this.state *= 1.5;
-        if(this.state > 100) {
-            this.state = 100;
-        }
+        if(this.state == 0) return;
+        this.state = this.state*1.5;
+        if(this.state > 100) this.state = 100;
     }
 
     setState(num) {
