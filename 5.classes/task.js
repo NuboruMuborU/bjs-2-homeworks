@@ -34,31 +34,31 @@ class PrintEditionItem {
         this.name = name;
         this.releaseDate = releaseDate;
         this.pagesCount = pagesCount;
-        this._state = 100;
+        this.state = 100;
         this.type = null;
     }
 
+    fix() {
+        this.state = this.state*1.5;
+        if(this.state > 100) this.state = 100;
+    }
+
     set state(num) {
+        let _state = this.state;
         if(num >= 100){ 
-            this._state = 100;
+            this.state = 100;
             return
         };
         if(num < 0) {
-            this._state = 0;
+            this.state = 0;
             return;
         }
-        this._state = num;
+        this.state = _state;
     }
 
     get state() {
         return this._state;
     }
-
-    fix() {
-        this._state = this._state*1.5;
-        this.state();
-    }
-
 }
 
 class Magazine extends PrintEditionItem {
