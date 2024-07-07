@@ -34,26 +34,25 @@ class PrintEditionItem {
         this.name = name;
         this.releaseDate = releaseDate;
         this.pagesCount = pagesCount;
-        this.state = 100;
+        this._state = 100;
         this.type = null;
     }
 
     fix() {
-        this.state = this.state*1.5;
-        if(this.state > 100) this.state = 100;
+        this._state = this._state*1.5;
+        if(this._state > 100) this._state = 100;
     }
 
     set state(num) {
-        let _state = this.state;
         if(num >= 100){ 
-            this.state = 100;
+            this._state = 100;
             return
         };
         if(num < 0) {
-            this.state = 0;
+            this._state = 0;
             return;
         }
-        this.state = _state;
+        this._state = num;
     }
 
     get state() {
