@@ -40,7 +40,6 @@ class PrintEditionItem {
 
     fix() {
         this._state = this._state*1.5;
-        if(this._state > 100) this._state = 100;
     }
 
     set state(num) {
