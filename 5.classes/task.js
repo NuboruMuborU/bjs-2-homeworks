@@ -38,11 +38,6 @@ class PrintEditionItem {
         this.type = null;
     }
 
-    fix() {
-        this._state = this._state*1.5;
-        this.state();
-    }
-
     set state(num) {
         if(num >= 100){ 
             this._state = 100;
@@ -58,6 +53,12 @@ class PrintEditionItem {
     get state() {
         return this._state;
     }
+
+    fix() {
+        this._state = this._state*1.5;
+        this.state();
+    }
+
 }
 
 class Magazine extends PrintEditionItem {
