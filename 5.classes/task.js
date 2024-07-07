@@ -5,7 +5,7 @@ class Library {
     }
 
     addBook(book) {
-        if(book.state > 30) this.books.push(book);
+        if(book._state > 30) this.books.push(book);
     }
 
     findBookBy(type, value) {
@@ -25,8 +25,8 @@ class Library {
             if(type == "pagesCount") {
                 if(value === this.books[index].pagesCount) return this.books[index];
             }
-            return null;
         }
+        return null;
     }
 
     giveBookByName(bookName) {
@@ -48,37 +48,34 @@ class PrintEditionItem {
         this.name = name;
         this.releaseDate = releaseDate;
         this.pagesCount = pagesCount;
-        this.state = 100;
+        this._state = 100;
         this.type = null;
     }
 
     fix() {
-        if(this.state == 0) return;
-        this.state = this.state*1.5;
-        if(this.state > 100) this.state = 100;
+        this._state = this._state*1.5;
     }
 
-    setState(num) {
+    set state(num) {
         if(num >= 100){ 
-            this.state = 100;
+            this._state = 100;
             return
         };
         if(num < 0) {
-            this.state = 0;
+            this._state = 0;
             return;
         }
-        this.state = num;
+        this._state = num;
     }
 
-    getState() {
-        return this.state;
+    get state() {
+        return this._state;
     }
 }
 
 class Magazine extends PrintEditionItem {
     constructor(name, releaseDate, pagesCount) {
             super(name, releaseDate, pagesCount);
-            super.getState();
             this.type = "magazine";
     }
 }
@@ -86,7 +83,6 @@ class Magazine extends PrintEditionItem {
 class Book extends PrintEditionItem {
     constructor(author, name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount);
-        super.getState();
         this.type = "book";
         this.author = author;
     }
@@ -95,7 +91,6 @@ class Book extends PrintEditionItem {
  class NovelBook extends Book {
     constructor(author, name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount);
-        super.getState();
         this.type = "novel";
         this.author = author;
     }
@@ -105,7 +100,6 @@ class Book extends PrintEditionItem {
  class FantasticBook extends Book {
     constructor(author, name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount);
-        super.getState();
         this.type = "fantastic";
         this.author = author;
     }
@@ -115,10 +109,10 @@ class Book extends PrintEditionItem {
  class DetectiveBook extends Book {
     constructor(author, name, releaseDate, pagesCount) {
         super(name, releaseDate, pagesCount);
-        super.getState();
         this.type = "detective";
         this.author = author;
     }
 }
+
 
    
