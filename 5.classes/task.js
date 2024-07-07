@@ -10,21 +10,7 @@ class Library {
 
     findBookBy(type, value) {
         for (let index = 0; index < this.books.length; index++) {
-            if(type == "name") {
-                if(value === this.books[index].name) return this.books[index];
-            }
-            if(type == "releaseDate") {
-                if(value === this.books[index].releaseDate) return this.books[index];
-            }
-            if(type == "author") {
-                if(value === this.books[index].author) return this.books[index];
-            }
-            if(type == "type") {
-                if(value === this.books[index].type) return this.books[index];
-            }
-            if(type == "pagesCount") {
-                if(value === this.books[index].pagesCount) return this.books[index];
-            }
+            if(this.books[index][type] === value) return this.books[index];
         }
         return null;
     }
@@ -54,6 +40,7 @@ class PrintEditionItem {
 
     fix() {
         this._state = this._state*1.5;
+        this.state();
     }
 
     set state(num) {
