@@ -1,12 +1,11 @@
-﻿function parseCount(parse){
+﻿function parseCount(parseUnit) {
     try {
-        let value = Number.parseFloat(parse);
-        if(isNaN(value)){
-            throw new Error('Невалидное значение');
-        } else{
-            return value;
+        if(isNaN(parseUnit) || parseUnit === " ") {
+            throw new Error("Невалидное значение");
+        } else {
+            return Number.parseFloat(parseUnit);
         }
-    } catch (error) {
+    } catch(error) {
         console.log(error);
     }
 }
