@@ -1,30 +1,10 @@
-﻿// function parseCount(parse) {
-//     try {
-//         if (isNaN(Number.parseFloat(parse))) {
-//             throw new Error("Невалидное значение").message;
-//         }
-//         return Number.parseFloat(parse);
-//     } catch (error) {
-//         console.log(error);
-//     }
-    
-// }
-
-// function validateCount(parse) {
-//     try {
-//         return parseFloat(parse);
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-
-
-function parseCount(parse) {
+﻿function parseCount(parse) {
+    let value = Number.parseFloat(parse);
     try {
-        if (isNaN(Number.parseFloat(parse))) {
+        if (isNaN(value)) {
             throw new Error("Невалидное значение");
         }
-        return Number.parseFloat(parse);
+        return value;
     } catch (error) {
         console.log(error);
     }
@@ -37,3 +17,32 @@ function validateCount(parse) {
         console.log(error);
     }
 }
+
+
+class Triangle {
+    constructor(a, b, c) {
+       this.a = a;
+       this.b = b;
+       this.c = c;
+    }
+
+    get perimeter() {
+        return this.a + this.b + this.c;
+    }
+
+    get area() {
+        let p = ((this.a + this.b + this.c)/2);
+        let s = ((p*(p-this.a)*(p-this.b)*(p-this.c))**0.5);
+        return s.toFixed(3);
+    }
+
+    // getTriangle(a, b, c) {
+    //     try {
+    //         if ((a + b) < c){
+    //             throw new Error("Треугольник с такими сторонами не существует")
+    //         }
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
+} 
