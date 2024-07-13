@@ -9,3 +9,11 @@
     }
     
 }
+
+function validateCount(parse) {
+    try {
+        return parseFloat(parse);
+    } catch (error) {
+        console.log(error);
+    }
+}
