@@ -1,19 +1,11 @@
-﻿function parseCount(parseUnit) {
+﻿function parseCount(parse) {
     try {
-        if (isNaN(parseUnit) || parseUnit === " ") {
+        if (isNaN(Number.parseFloat(parse))) {
             throw new Error("Невалидное значение");
-        } else {
-            return Number.parseFloat(parseUnit);
         }
+        return Number.parseFloat(parse);
     } catch (error) {
         console.log(error);
     }
-}
-
-function validateCount(validateUnit) {
-    try {
-        parseCount(validateUnit);
-    } catch (error) {
-        console.log(error);
-    }
+    
 }
