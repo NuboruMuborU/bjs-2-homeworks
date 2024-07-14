@@ -42,5 +42,3 @@ class Triangle {
     }
 
 }
-
-// hhgg
