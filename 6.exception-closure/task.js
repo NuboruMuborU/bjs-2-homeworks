@@ -25,7 +25,7 @@ class Triangle {
         this.b = b;
         this.c = c;
 
-        if (!(a + b > c || a + c > b || b + c > a)) {
+        if (!(a + b > c) || !(a + c > b) || !(b + c > a)) {
             throw new Error("Треугольник с такими сторонами не существует");
         }
     }
@@ -40,5 +40,8 @@ class Triangle {
         let s = ((p * (p - this.a) * (p - this.b) * (p - this.c)) ** 0.5);
         return Number(s.toFixed(3));
     }
-
 }
+
+// const triangle = new Triangle(1, 3, 100);
+
+// console.log(triangle);
