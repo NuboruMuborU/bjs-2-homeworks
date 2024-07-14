@@ -40,8 +40,19 @@ class Triangle {
         let s = ((p * (p - this.a) * (p - this.b) * (p - this.c)) ** 0.5);
         return Number(s.toFixed(3));
     }
+
 }
 
-// const triangle = new Triangle(1, 3, 100);
-
-// console.log(triangle);
+function getTriangle(a, b, c) {
+    try {
+        const triangle = new Triangle(a, b, c);
+        if (triangle === Object) {
+            this.area = "неправильное значение";
+            this.perimeter = "неправильное значение";
+            throw new Error("Ошибка! Треугольник не существует");
+        }
+        return triangle;
+    } catch (error) {
+        console.log(error);
+    }
+}
