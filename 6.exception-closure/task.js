@@ -28,13 +28,13 @@ class Triangle {
 
     get perimeter() {
         let p = this.a + this.b + this.c;
-        return parseCount(p);
+        return Number(p);
     }
 
     get area() {
-        let p = ((this.a + this.b + this.c)/2);
-        let s = ((p*(p-this.a)*(p-this.b)*(p-this.c))**0.5);
-        return parseCount(s).toFixed(3);
+        let p = ((this.a + this.b + this.c) / 2);
+        let s = ((p * (p - this.a) * (p - this.b) * (p - this.c)) ** 0.5);
+        return Number(s.toFixed(3));
     }
 
     // getTriangle(a, b, c) {
