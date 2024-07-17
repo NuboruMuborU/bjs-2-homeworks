@@ -45,13 +45,11 @@ class Triangle {
 
 function getTriangle(a, b, c) {
     try {
-        const triangle = new Triangle(a, b, c);
-        if (triangle === Object) {
-            this.area = "неправильное значение";
-            this.perimeter = "неправильное значение";
-            throw new Error("Ошибка! Треугольник не существует");
+        let triangle = new Triangle(a, b, c);
+        if (triangle) {
+            return triangle;
         }
-        return triangle;
+        throw new Error("Ошибка! Треугольник не существует");
     } catch (error) {
         console.log(error);
     }
